@@ -19,7 +19,7 @@ export default function Home() {
             ログイン
           </Link>
           <Link
-            href="/register"
+            href="/signup"
             className="bg-blue-500 hover:bg-blue-600 text-white text-center py-2 px-6 rounded-xl font-semibold"
           >
             新規登録
