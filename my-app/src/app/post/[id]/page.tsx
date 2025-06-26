@@ -86,7 +86,7 @@ export default function ProjectDetailPage() {
       if (error) {
         console.error('コメント取得エラー:', error);
       } else {
-        const formatted = data.map((c: any) => ({
+        const formatted = (data ?? []).map((c: any) => ({
           id: c.id,
           content: c.content,
           created_at: c.created_at,
@@ -162,7 +162,7 @@ export default function ProjectDetailPage() {
         .eq('project_id', id)
         .order('created_at', { ascending: false });
 
-      const formatted = data.map((c: any) => ({
+      const formatted = (data ?? []).map((c: any) => ({
         id: c.id,
         content: c.content,
         created_at: c.created_at,
